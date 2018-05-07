@@ -22,7 +22,7 @@ export class WatchListComponent implements OnInit{
 
     ngOnInit(){
         var key : string = "watchlist";
-        let film = JSON.parse(localStorage.getItem(key));
-        this.films.push(film);
+        this.films = JSON.parse(localStorage.getItem(key));
+        
     }
 }

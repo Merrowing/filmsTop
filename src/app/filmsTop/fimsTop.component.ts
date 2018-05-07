@@ -22,7 +22,8 @@ import {Film} from '../film';
 export class FilmsTopComponent implements OnInit { 
    
     films: Film[]=[];
-     
+    wtFilms: Film[]=[];
+    wiFilms: Film[]=[];
     constructor(private httpService: HttpService){}
       
     ngOnInit(){
@@ -32,11 +33,19 @@ export class FilmsTopComponent implements OnInit {
 
     addToWatchlist(film: Film){
         var key: string = "watchlist";
-        localStorage.setItem(key, JSON.stringify(film));
+        this.wtFilms = JSON.parse(localStorage.getItem(key));
+        if(this.wtFilms == null)
+            this.wtFilms = [];
+        this.wtFilms.push(film);
+        localStorage.setItem(key, JSON.stringify(this.wtFilms));
     }
 
     addToWishlist(film : Film){
-        var wishlist: string = "wishlist";
-        localStorage.setItem(wishlist, JSON.stringify(film));
+        var key: string = "wishlist";
+        this.wiFilms = JSON.parse(localStorage.getItem(key));
+        if(this.wiFilms == null)
+            this.wiFilms = [];
+        this.wiFilms.push(film);
+        localStorage.setItem(key, JSON.stringify(this.wiFilms));
     }
 }

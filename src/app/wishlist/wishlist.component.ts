@@ -22,7 +22,6 @@ export class WishListComponent implements OnInit{
 
     ngOnInit(){
         var key : string = "wishlist";
-        let film = JSON.parse(localStorage.getItem(key));
-        this.films.push(film);
+        this.films = JSON.parse(localStorage.getItem(key));
     }
 }

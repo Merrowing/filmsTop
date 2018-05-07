@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
             <a routerLink="/filmsTop">Last10</a>
             <a routerLink="/search">Search</a>
             <a routerLink="/watchlist">Watchlist</a>
-            <a routerLink="/wishlist">Watchlist</a>
+            <a routerLink="/wishlist">Wishlist</a>
          </nav>
     <router-outlet></router-outlet>
 </div>`
