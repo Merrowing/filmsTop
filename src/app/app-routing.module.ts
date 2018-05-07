@@ -8,9 +8,13 @@ import { WishListComponent } from './wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/filmsTop', pathMatch: 'full' },
+  { path: 'filmsTop', redirectTo: '/filmsTop', pathMatch: 'full' },
   { path: 'filmsTop', component: FilmsTopComponent },
+  { path: 'search', redirectTo: '/search', pathMatch: 'full' },
   { path: 'search', component: SearchComponent },
+  { path: 'watchlist', redirectTo: '/watchlist', pathMatch: 'full' },
   { path: 'watchlist', component: WatchListComponent },
+  { path: 'wishlist', redirectTo: '/wishlist', pathMatch: 'full' },
   { path: 'wishlist', component: WishListComponent },
 ];
 
